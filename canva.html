@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Título animado y dos imágenes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fff);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, #00b4d8, #0077b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: cambiarColor 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes cambiarColor {
+      0% { letter-spacing: 2px; transform: scale(1); }
+      100% { letter-spacing: 5px; transform: scale(1.05); }
+    }
+
+    .imagenes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .imagenes img {
+      width: 300px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .imagenes img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galería Creativa</h1>
+
+  <div class="imagenes">
+    <img src="imegenes/Captura de pantalla 2025-07-31 173959.png" alt="Imagen 1">
+    <img src="imegenes/Captura de pantalla 2025-07-31 174004.png" alt="Imagen 2">
+  </div>
+
+</body>
+</html>
